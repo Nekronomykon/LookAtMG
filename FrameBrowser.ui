@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrameBrowser</class>
+ <widget class="QMainWindow" name="FrameBrowser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Look At M[ol]G[raph][*]</string>
+  </property>
+  <widget class="FrameFileData" name="view_"/>
+  <widget class="QMenuBar" name="barMenu_">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile_">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuNew_">
+     <property name="title">
+      <string>&amp;New</string>
+     </property>
+     <addaction name="actionNewFile_"/>
+     <addaction name="actionNewBrowser_"/>
+    </widget>
+    <widget class="QMenu" name="menuRecentFiles_">
+     <property name="title">
+      <string>Re&amp;cent files</string>
+     </property>
+     <addaction name="actionForget_"/>
+     <addaction name="actionForgetAll_"/>
+     <addaction name="separator"/>
+    </widget>
+    <addaction name="menuNew_"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_"/>
+    <addaction name="actionReload_"/>
+    <addaction name="actionImport_"/>
+    <addaction name="menuRecentFiles_"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_"/>
+    <addaction name="actionDetach_"/>
+    <addaction name="actionSaveAs_"/>
+    <addaction name="actionSaveCopy_"/>
+    <addaction name="actionExport_"/>
+    <addaction name="separator"/>
+    <addaction name="actionProperties_"/>
+    <addaction name="actionClose_"/>
+    <addaction name="actionExit_"/>
+   </widget>
+   <widget class="QMenu" name="menuInfo_">
+    <property name="title">
+     <string>&amp;?</string>
+    </property>
+    <addaction name="actionAboutThis_"/>
+    <addaction name="actionAboutQt_"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit_">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionUndo_"/>
+    <addaction name="actionRedo_"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut_"/>
+    <addaction name="actionCopy_"/>
+    <addaction name="actionPaste_"/>
+    <addaction name="separator"/>
+    <addaction name="actionClear_"/>
+    <addaction name="actionClearAll_"/>
+    <addaction name="actionClearOthers_"/>
+   </widget>
+   <widget class="QMenu" name="menuTools_">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="actionBondsAssume_"/>
+    <addaction name="actionBondsClear_"/>
+    <addaction name="separator"/>
+    <addaction name="actionOptions_"/>
+    <addaction name="actionPreferences_"/>
+   </widget>
+   <widget class="QMenu" name="menuView_">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <widget class="QMenu" name="menuMolecule_">
+     <property name="title">
+      <string>&amp;Molecule</string>
+     </property>
+     <addaction name="actionStyleMolFast_"/>
+     <addaction name="separator"/>
+     <addaction name="actionStyleMolSticks_"/>
+     <addaction name="actionStyleMolBalls_"/>
+     <addaction name="actionStyleMolSpace_"/>
+     <addaction name="separator"/>
+     <addaction name="actionViewBonds_"/>
+     <addaction name="actionLabelAtoms_"/>
+     <addaction name="actionLabelBonds_"/>
+    </widget>
+    <widget class="QMenu" name="menuProject_">
+     <property name="title">
+      <string>Pro&amp;jection</string>
+     </property>
+     <addaction name="actionProjectReset_"/>
+     <addaction name="separator"/>
+     <addaction name="actionProjectOrthogonal_"/>
+     <addaction name="actionProjectPerspective_"/>
+    </widget>
+    <addaction name="actionFullScreen_"/>
+    <addaction name="separator"/>
+    <addaction name="actionBackgroundColor_"/>
+    <addaction name="separator"/>
+    <addaction name="menuProject_"/>
+    <addaction name="menuMolecule_"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrintPreview_"/>
+    <addaction name="actionPrintNow_"/>
+    <addaction name="actionPrintSetup_"/>
+    <addaction name="actionPageSetup_"/>
+   </widget>
+   <addaction name="menuFile_"/>
+   <addaction name="menuView_"/>
+   <addaction name="menuEdit_"/>
+   <addaction name="menuTools_"/>
+   <addaction name="menuInfo_"/>
+  </widget>
+  <widget class="QStatusBar" name="barStatus_"/>
+  <action name="actionNewFile_">
+   <property name="text">
+    <string>&amp;File..</string>
+   </property>
+  </action>
+  <action name="actionNewBrowser_">
+   <property name="text">
+    <string>&amp;Workspace..</string>
+   </property>
+  </action>
+  <action name="actionOpen_">
+   <property name="text">
+    <string>&amp;Open..</string>
+   </property>
+  </action>
+  <action name="actionReload_">
+   <property name="text">
+    <string>&amp;Reload</string>
+   </property>
+  </action>
+  <action name="actionClose_">
+   <property name="text">
+    <string>Clos&amp;e</string>
+   </property>
+  </action>
+  <action name="actionExit_">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionAboutThis_">
+   <property name="text">
+    <string>&amp;About..</string>
+   </property>
+  </action>
+  <action name="actionAboutQt_">
+   <property name="text">
+    <string>About &amp;Qt..</string>
+   </property>
+  </action>
+  <action name="actionSave_">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="actionSaveAs_">
+   <property name="text">
+    <string>S&amp;ave as..</string>
+   </property>
+  </action>
+  <action name="actionSaveCopy_">
+   <property name="text">
+    <string>Sa&amp;ve a copy..</string>
+   </property>
+  </action>
+  <action name="actionImport_">
+   <property name="text">
+    <string>&amp;Import..</string>
+   </property>
+  </action>
+  <action name="actionExport_">
+   <property name="text">
+    <string>Ex&amp;port..</string>
+   </property>
+  </action>
+  <action name="actionForget_">
+   <property name="text">
+    <string>&amp;Forget</string>
+   </property>
+  </action>
+  <action name="actionForgetAll_">
+   <property name="text">
+    <string>Forget &amp;all</string>
+   </property>
+  </action>
+  <action name="actionUndo_">
+   <property name="text">
+    <string>&amp;Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo_">
+   <property name="text">
+    <string>&amp;Redo</string>
+   </property>
+  </action>
+  <action name="actionCut_">
+   <property name="text">
+    <string>C&amp;ut</string>
+   </property>
+  </action>
+  <action name="actionCopy_">
+   <property name="text">
+    <string>&amp;Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste_">
+   <property name="text">
+    <string>&amp;Paste</string>
+   </property>
+  </action>
+  <action name="actionClear_">
+   <property name="text">
+    <string>C&amp;lear</string>
+   </property>
+  </action>
+  <action name="actionClearAll_">
+   <property name="text">
+    <string>Clear &amp;all</string>
+   </property>
+  </action>
+  <action name="actionDetach_">
+   <property name="text">
+    <string>&amp;Detach</string>
+   </property>
+  </action>
+  <action name="actionOptions_">
+   <property name="text">
+    <string>&amp;Options..</string>
+   </property>
+  </action>
+  <action name="actionProperties_">
+   <property name="text">
+    <string>&amp;Properties..</string>
+   </property>
+  </action>
+  <action name="actionFullScreen_">
+   <property name="text">
+    <string>&amp;Full-screen..</string>
+   </property>
+  </action>
+  <action name="actionPrintPreview_">
+   <property name="text">
+    <string>Print pre&amp;view..</string>
+   </property>
+  </action>
+  <action name="actionPreferences_">
+   <property name="text">
+    <string>&amp;Preferences..</string>
+   </property>
+  </action>
+  <action name="actionPrintNow_">
+   <property name="text">
+    <string>Print..</string>
+   </property>
+  </action>
+  <action name="actionPrintSetup_">
+   <property name="text">
+    <string>Print &amp;setup..</string>
+   </property>
+  </action>
+  <action name="actionPageSetup_">
+   <property name="text">
+    <string>Pa&amp;ge setup..</string>
+   </property>
+  </action>
+  <action name="actionBackgroundColor_">
+   <property name="text">
+    <string>&amp;Background color..</string>
+   </property>
+  </action>
+  <action name="actionClearOthers_">
+   <property name="text">
+    <string>Clear &amp;others</string>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+  </action>
+  <action name="actionBondsClear_">
+   <property name="text">
+    <string>&amp;Clear bonds</string>
+   </property>
+  </action>
+  <action name="actionBondsAssume_">
+   <property name="text">
+    <string>&amp;Assume bonds..</string>
+   </property>
+  </action>
+  <action name="actionViewBonds_">
+   <property name="text">
+    <string>Bo&amp;nds</string>
+   </property>
+  </action>
+  <action name="actionStyleMolSticks_">
+   <property name="text">
+    <string>&amp;Sticks</string>
+   </property>
+  </action>
+  <action name="actionStyleMolBalls_">
+   <property name="text">
+    <string>&amp;Balls</string>
+   </property>
+  </action>
+  <action name="actionStyleMolSpace_">
+   <property name="text">
+    <string>S&amp;pheres</string>
+   </property>
+  </action>
+  <action name="actionStyleMolFast_">
+   <property name="text">
+    <string>&amp;Fast</string>
+   </property>
+  </action>
+  <action name="actionLabelAtoms_">
+   <property name="text">
+    <string>&amp;Atom labels</string>
+   </property>
+  </action>
+  <action name="actionLabelBonds_">
+   <property name="text">
+    <string>B&amp;ond labels</string>
+   </property>
+  </action>
+  <action name="actionProjectReset_">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionProjectOrthogonal_">
+   <property name="text">
+    <string>Orthogonal</string>
+   </property>
+  </action>
+  <action name="actionProjectPerspective_">
+   <property name="text">
+    <string>Perspective</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FrameFileData</class>
+   <extends>QTabWidget</extends>
+   <header>FrameFileData.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

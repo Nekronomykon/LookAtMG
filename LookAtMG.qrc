@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/LookAtMG.png</file>
+        <file>images/Exit.png</file>
+        <file>images/EditSrc.png</file>
+        <file>images/ViewStr.png</file>
+        <file>images/NewWindow.png</file>
+        <file>images/NewDocument.png</file>
+        <file>images/CloseWindow.png</file>
+        <file>images/FullScreen.png</file>
+        <file>images/Open.png</file>
+        <file>images/Reload.png</file>
+        <file>images/Recent.png</file>
+        <file>images/Save.png</file>
+        <file>images/SaveAs.png</file>
+        <file>images/SaveCopyAs.png</file>
+        <file>images/Import.png</file>
+        <file>images/Export.png</file>
+        <file>images/Detach.png</file>
+        <file>images/Undo.png</file>
+        <file>images/Redo.png</file>
+        <file>images/Cut.png</file>
+        <file>images/Copy.png</file>
+        <file>images/Paste.png</file>
+        <file>images/Clear.png</file>
+        <file>images/ClearAll.png</file>
+        <file>images/ClearOthers.png</file>
+        <file>images/BgColor.png</file>
+        <file>images/Options.png</file>
+        <file>images/About.png</file>
+        <file>images/AboutKit.png</file>
+        <file>images/Properties.png</file>
+        <file>images/ProjectReset.png</file>
+        <file>images/ProjectOrthogonal.png</file>
+        <file>images/ProjectPerspective.png</file>
+        <file>images/LabelAtom.png</file>
+        <file>images/LabelBond.png</file>
+        <file>images/StyleBall.png</file>
+        <file>images/StyleFast.png</file>
+        <file>images/StyleStick.png</file>
+        <file>images/StyleSpace.png</file>
+        <file>images/ViewBond.png</file>
+    </qresource>
+</RCC>
