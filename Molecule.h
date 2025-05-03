@@ -23,7 +23,7 @@ typedef vtkSmartPointer<Molecule> AMolecule;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // паллиатив какой-то, пока совершенно мятый синтаксически...
-//
+//  
 template <class Arg = vtkIdTypeArray>
 struct AddSpecialAtom
 {

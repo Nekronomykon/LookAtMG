@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.30 FATAL_ERROR)
+cmake_policy(SET CMP0167 NEW)
+
 
 project(LookAtMG VERSION 0.25 LANGUAGES CXX)
 
@@ -21,10 +23,11 @@ find_package(VTK 9 COMPONENTS
   RenderingOpenGL2
   GUISupportQt
   RenderingQt
-  REQUIRED QUIET
-  )
+  REQUIRED QUIET)
+find_package(Boost 1.87.0
+  REQUIRED QUIET)
 
-  include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+  include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} ${Boost_INCLUDE_DIRS})
   set(CMAKE_INCLUDE_CURRENT_DIR ON)
   
   set(CMAKE_AUTOUIC ON)
